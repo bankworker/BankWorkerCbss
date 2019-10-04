@@ -1,0 +1,19 @@
+{
+  "StoreService": {
+    "host": "localhost",
+    "port": 8080,
+    "path": {
+      "item": "/api/item",
+      "itemByID": "/api/item/current",
+      "detail": "/api/detail",
+      "detail4Item": "/api/detail/item",
+      "detail4File": "/api/detail/file",
+      "detail4ImageMemo": "/api/detail/imageMemo",
+      "news": "/api/news",
+      "user": "/api/user",
+      "sysName": "/api/systemName",
+      "logo": "/api/logo",
+      "logo4Branch": "/api/logo/branch"
+    }
+  }
+}

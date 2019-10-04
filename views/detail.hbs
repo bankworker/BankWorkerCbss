@@ -1,0 +1,97 @@
+<div class="EnvironmentalBg">
+</div>
+<div class="content">
+  <div class="title">
+    <h2>
+      <span class="page-title"></span>
+    </h2>
+  </div>
+  <div class="imgContainer clearfix">
+    <div class="detail-switch">
+      <ul>
+        <li class="detail-switch-select"  id="switch-photo" data-target="banner-image"><a href="#">照片</a></li>
+        <li id="switch-text" data-target="banner-text"><a href="#">文字</a></li>
+        <li id="switch-video" data-target="banner-video"><a href="#">视频</a></li>
+      </ul>
+    </div>
+
+    <div class="banner banner-image">
+      <div class="large_box">
+        <span class="left_btn"></span>
+        <ul>
+          {{#each imageList}}
+            <li>
+              <img src="{{this.imageUrl}}" data-detail-id="{{this.detailID}}">
+            </li>
+          {{/each}}
+        </ul>
+        <span class="right_btn"></span>
+      </div>
+      <div class="small_box">
+        <span class="btn left_btn"></span>
+        <div class="small_list">
+          <ul style="width: 776px; margin: 0 auto">
+            {{#each imageList}}
+              <li>
+                <img src="{{this.imageUrl}}" data-detail-id="{{this.detailID}}">
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <span class="right_btn"></span>
+      </div>
+    </div>
+
+    <div class="banner banner-text hidden">
+      <span class="left_btn"></span>
+      {{#each textList}}
+        <p data-detail-id="{{this.detailID}}">{{this.content}}</p>
+      {{/each}}
+    </div>
+
+    <div class="banner banner-video hidden">
+          <div class="large_box">
+              <span class="left_btn"></span>
+              <ul>
+                  {{#each videoList}}
+                      <li>
+                          <video src="{{this.videoUrl}}" controls="controls" data-detail-id="{{this.detailID}}" class="detail-video">
+                              您使用的浏览器不支持视频播放，请使用Chrome浏览器。
+                          </video>
+                      </li>
+                  {{/each}}
+              </ul>
+              <span class="right_btn"></span>
+          </div>
+          <div class="small_box">
+              <span class="btn left_btn"></span>
+              <div class="small_list">
+                  <ul>
+                      {{#each videoList}}
+                          <li>
+                              <img src="{{this.imageUrl}}" data-detail-id="{{this.detailID}}">
+                          </li>
+                      {{/each}}
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+    <div class="attachment">
+      <h2>附件</h2>
+      <ul class="clearfix">
+        {{#each fileList}}
+          <li>
+            <a href="{{this.fileUrl}}" target="_blank">{{this.fileName}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="copyright">
+  交通银行渭南分行 服务档案
+</div>
+<input type="hidden" value="{{itemID}}" id="hidden-itemID">
+<input type="hidden" value="{{itemName}}" id="hidden-itemName">
+<script src="javascripts/detail.js"></script>

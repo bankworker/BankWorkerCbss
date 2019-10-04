@@ -1,0 +1,35 @@
+<div class="EnvironmentalBg">
+</div>
+<div class="content">
+  <div class="title">
+    <h2>
+      <img src="../../images/icons/icon.png" alt="" />
+      <span class="page-title"></span>
+    </h2>
+  </div>
+
+  <div class="attachmentWarm">
+    <img src="../../images/icons/fy.png" alt="" />
+  </div>
+  <div class="imgContainer">
+    <div class="attachment clearfix">
+
+      <ul class="clearfix">
+        {{#each fileList}}
+          <li>
+            <a href="{{this.fileUrl}}" target="_blank">{{this.fileName}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="copyright">
+  交通银行渭南分行 服务档案管理系统
+</div>
+<input type="hidden" value="{{itemID}}" id="hidden-itemID">
+<input type="hidden" value="{{itemName}}" id="hidden-itemName">
+<input type="hidden" value="{{year}}" id="hidden-year">
+<input type="hidden" value="{{quarter}}" id="hidden-quarter">
+<script src="javascripts/detailOnlyFile.js"></script>

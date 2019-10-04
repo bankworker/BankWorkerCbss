@@ -1,0 +1,27 @@
+<link rel='stylesheet' href='/stylesheets/newsList.css' />
+<div class="newshead"></div>
+<div class="container" id="app" style="margin-top: 15px">
+  <div class="news-list">
+    <div class="media" v-for="news in newsArray" style="border-bottom: 1px solid #cccccc; padding-bottom: 10px;">
+      <div class="media-left">
+        <a :href="news.newsUrl" target="_blank">
+          <img class="media-object" :src="news.thumbnailUrl" style="width: 80px">
+        </a>
+      </div>
+      <div class="media-body">
+        <a :href="news.newsUrl" target="_blank">
+          <h3 class="media-heading news-title" style="padding-top: 10px">\{{news.newsTitle}}</h3>
+        </a>
+        <p class="news-time">
+          \{{news.newsDate}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center" style="margin-top: 15px">
+    <div>
+      <a href="javascript:;" class="load-more" @click="onLoadMore()">加载更多</a>
+    </div>
+  </div>
+</div>
+<script src="javascripts/newsList.js"></script>

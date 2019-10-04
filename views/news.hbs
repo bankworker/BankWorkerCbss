@@ -1,0 +1,18 @@
+<div class="newshead"></div>
+<div class="container" id="app">
+  <div class="newstop">
+    <a href="">网点近期新闻列表</a> <em style="color: #07347c;">></em> <a href="" style="color: #07347c;">详情页</a>
+  </div>
+  <div class="newscont">
+    <h2>\{{newsTitle}}</h2>
+    <h4 class="news-date">\{{bankName}}\{{branchName}} \{{newsDate}}</h4>
+    <div v-for="news in newsContentList" class="news-content">
+      <p v-if="news.newsContentType === 'T'">\{{news.newsContent}}</p>
+      <img v-if="news.newsContentType === 'I'" :src="news.newsContent" alt="">
+      <video v-if="news.newsContentType === 'V'" :src="news.newsContent" controls="controls">
+        您使用的浏览器不支持视频播放，请使用Chrome浏览器。  </video>
+    </div>
+  </div>
+</div>
+<input type="hidden" value="{{newsID}}" id="hidden-newsID">
+<script src="javascripts/news.js"></script>

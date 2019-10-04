@@ -2,7 +2,139 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7c3fbc2-db40-4c61-9bd1-9975efebb8cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pagingUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/serviceInvokeUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/apiConfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/sysConfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap-3.3.7/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap-3.3.7/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap-3.3.7/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap-3.3.7/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/bootstrap-3.3.7/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fileUpload/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fileUpload/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fileUpload/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fileUpload/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-3.2.1/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/font-awesome-4.7.0/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/avatars/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/backimg.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/album-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/arrowP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/arrowd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/bg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/fy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/fy2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/ic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/icon2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/imgD.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/imgS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/module1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/module2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/module3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/module4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/module5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/module6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/module7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/module8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/module9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new-logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/new_29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/news.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/page_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/pdf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/search.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/sub.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/tree-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/video.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/video.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/icons/video.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo_branch.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo_head.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/news-head.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/detailOnlyFile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/horsey/horsey.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/img.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/jquery-2.2.0/jquery-2.2.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/jtree/handledata.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/jtree/jtree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/jtree/tools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/layer/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/layer/mobile/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/layer/mobile/need/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/layer/theme/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/layer/theme/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/layer/theme/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/layer/theme/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/layer/theme/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/layer/theme/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/news.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/newsList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/vuejs/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/vuejs/vue.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/bootstrap-3.3.7/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/bootstrap-3.3.7/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/detailOnlyFile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/font-awesome-3.2.1/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/horsey/horsey.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/jtree/jtree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/news.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/newsList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/style-2.0.0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/news.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/newsList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/commonService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/detail.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/detailOnlyFile.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/home.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/list.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/news.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/newsList.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/detailOnlyFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.hbs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -12,6 +144,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,6 +169,21 @@
             <path>
               <item name="BankWorkerCbss" type="b2602c69:ProjectViewProjectNode" />
               <item name="BankWorkerCbss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BankWorkerCbss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BankWorkerCbss" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BankWorkerCbss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BankWorkerCbss" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BankWorkerCbss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BankWorkerCbss" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -75,23 +225,31 @@
       <option name="presentableId" value="Default" />
       <updated>1570161887116</updated>
       <workItem from="1570161888216" duration="516000" />
-      <workItem from="1570162494226" duration="265000" />
+      <workItem from="1570162494226" duration="513000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1570162828199</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570162828199</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="781000" />
+    <option name="totallyTimeSpent" value="1029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="945" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21338156" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21338156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39976552" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -112,5 +270,12 @@
       <path value="$PROJECT_DIR$/../../.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
   </component>
 </project>
