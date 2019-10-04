@@ -1,18 +1,101 @@
-<div class="guideBg">
-</div>
-<div class="logo">
-  <img src="/images/logo_head.jpg" alt="" />
-</div>
-<div class="guidepage" id="app">
-  <div class="guideimg">
-    <img src="/images/logo_branch.jpg" alt="" />
+<link rel='stylesheet' href='/stylesheets/home.css' />
+<div class="row" id="app">
+  <div class="col-md-3">
+    <div class="home-logo">
+      <img src="../images/logo_head.jpg" alt="">
+    </div>
+    <div class="branch-logo">
+      <img src="../images/logo_branch.jpg" alt="">
+    </div>
   </div>
-  <div class="guidetext">
-    <h1 class="sys-title">\{{title}}</h1>
+  <div class="col-md-9 back-img">
+    <div class="home-content">
+      <div class="row content-header">
+        <div class="col-md-6">
+          <img src="../images/icons/new-logo.jpg" alt="">
+        </div>
+        <div class="col-md-6">
+          <div class="search-group">
+            <input type="search" class="form-search" id="fileName" placeholder="在此键入您想搜索的图片或文件的标题">
+            <span class="glyphicon glyphicon-search" style="margin-top: 6px; font-size: 16px"></span>
+          </div>
+        </div>
+      </div>
+      <div class="row content-body">
+        <div class="col-md-6 title">
+          <h1>Welcome</h1>
+          <span>交通银行渭南分行服务档案</span>
+        </div>
+        <div class="col-md-6 no-padding-right">
+          <div class="module">
+            <ul>
+              <li>
+                <a href="/list?itemID=1&itemName=网点环境">
+                  <img src="../images/icons/module1.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="/list?itemID=2&itemName=网点设施">
+                  <img src="../images/icons/module2.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="/list?itemID=3&itemName=服务功能">
+                  <img src="../images/icons/module3.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="/list?itemID=4&itemName=员工管理">
+                  <img src="../images/icons/module4.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="/list?itemID=5&itemName=岗位规范">
+                  <img src="../images/icons/module5.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="/list?itemID=6&itemName=服务制度">
+                  <img src="../images/icons/module6.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="/list?itemID=7&itemName=服务文化">
+                  <img src="../images/icons/module7.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="/list?itemID=8&itemName=经营业绩">
+                  <img src="../images/icons/module8.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="/list?itemID=9&itemName=社会责任">
+                  <img src="../images/icons/module9.png" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row content-news">
+        <div class="col-md-6 title-text">
+          新闻该要
+        </div>
+        <div class="col-md-6">
+          <button type="button" class="btn-more-news news-header-right">
+          更多新闻
+          <span class="glyphicon glyphicon-plus"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="row content-news-item">
+        <ul></ul>
+      </div>
+    </div>
   </div>
-  <a class="enter-sys" href="/home">
-    <!--<img src="/images/icons/3.png" alt="" />-->
-    进入系统
-  </a>
 </div>
-<script src="javascripts/index.js"></script>
+<ul class="sey-list sey-show" style="top: 62px; left: 989px; width: 310px">
+</ul>
+<script src="javascripts/home.js"></script>

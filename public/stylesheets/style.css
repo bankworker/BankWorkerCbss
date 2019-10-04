@@ -1100,3 +1100,7 @@ img {
   width: 623px;
   height: 350px;
 }
+.background-login{
+  background: url(../images/bg.jpeg) no-repeat center center fixed;
+  background-size: 100%;
+}

@@ -1,19 +1,19 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var homeRouter = require('./routes/home');
-var listRouter = require('./routes/list');
-var detailRouter = require('./routes/detail');
-var detailOnlyFileRouter = require('./routes/detailOnlyFile');
-var common = require('./routes/common');
-var newsListRouter = require('./routes/newsList');
-var newsRouter = require('./routes/news');
+let loginRouter = require('./routes/login');
+let indexRouter = require('./routes');
+let listRouter = require('./routes/list');
+let detailRouter = require('./routes/detail');
+let detailOnlyFileRouter = require('./routes/detailOnlyFile');
+let common = require('./routes/common');
+let newsListRouter = require('./routes/newsList');
+let newsRouter = require('./routes/news');
 
-var app = express();
+let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,8 +25,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/home', homeRouter);
+app.use('/', loginRouter);
+app.use('/login', loginRouter);
+app.use('/index', indexRouter);
 app.use('/list', listRouter);
 app.use('/detail', detailRouter);
 app.use('/detailOnlyFile', detailOnlyFileRouter);

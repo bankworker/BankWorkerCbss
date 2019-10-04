@@ -1,30 +1,35 @@
 let express = require('express');
-let sysConfig = require('../config/sysConfig');
 let commonService = require('../service/commonService');
+let sysConfig = require('../config/sysConfig');
 let router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: '交通银行服务档案管理系统', bodyClass: '' });
+  res.render('index', {title: '主页', bodyClass: 'bg-normal'});
 });
 
-router.get('/sysName', function(req, res, next) {
-  let service = new commonService.commonInvoke('sysName');
+router.get('/newsList', function(req, res, next) {
+  let service = new commonService.commonInvoke('news');
+  let pageNumber = req.query.pageNumber;
+  let pageSize = sysConfig.newsPageSize;
+  let bankID = sysConfig.bankID;
+  let branchID = sysConfig.branchID;
 
-  service.get(sysConfig.systemID, function (result) {
-    if(result.err){
+  let parameter = pageNumber + '/' + pageSize + '/' + bankID + '/' + branchID;
+
+  service.get(parameter, function (result) {
+    if (result.err) {
       res.json({
         err: true,
         msg: result.msg
       });
-    }else{
+    } else {
       res.json({
         err: !result.content.result,
         msg: result.content.responseMessage,
-        data: result.content.responseData
+        dataList: result.content.responseData
       });
     }
-  });
+  })
 });
 
 module.exports = router;

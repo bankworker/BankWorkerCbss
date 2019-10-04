@@ -1,8 +1,10 @@
 {
   "StoreService": {
     "host": "localhost",
-    "port": 8080,
+    "port": 8081,
     "path": {
+      "branchInfo": "/api/bank/branch/code",
+      "login": "/api/system/account/login",
       "item": "/api/item",
       "itemByID": "/api/item/current",
       "detail": "/api/detail",
