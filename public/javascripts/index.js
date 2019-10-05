@@ -6,6 +6,7 @@ app.controller('myCtrl', function ($scope, $http) {
     branchLogoUrl: '',
     isUseDefaultBackImage: false,
     branchBackImageStyle: {},
+    branchName: '',
     branchSystemTitle: '',
     branchModuleList: [],
     branchNewsList: [],
@@ -33,6 +34,7 @@ app.controller('myCtrl', function ($scope, $http) {
       $scope.model.bankLogoUrl = response.data.branchInfo.bankLogo;
       $scope.model.branchLogoUrl = response.data.branchInfo.branchLogo;
       $scope.model.branchSystemTitle = response.data.branchInfo.branchName + '服务档案';
+      $scope.model.branchName = response.data.branchInfo.branchName;
       $scope.model.branchBackImageStyle = {
         "background": "url(" + response.data.branchInfo.branchBackImage + ") repeat-y center center fixed",
         "background-size": "100%"
@@ -126,18 +128,6 @@ app.controller('myCtrl', function ($scope, $http) {
     }, function errorCallback(response) {
       bootbox.alert('网络异常，请检查网络设置');
     });
-
-    // $scope.model.isShowSearchResult = true;
-    // $scope.model.searchResultList.push({filePath: 'http://www.baidu.com', archiveName: '数据1', isMoveOver: false});
-    // $scope.model.searchResultList.push({filePath: 'http://www.youku.com', archiveName: '数据2', isMoveOver: false});
-    // $scope.model.searchResultList.push({filePath: 'http://www.baidu.com', archiveName: '数据3', isMoveOver: false});
-    // $scope.model.searchResultList.push({filePath: 'http://www.youku.com', archiveName: '数据4', isMoveOver: false});
-    // $scope.model.searchResultList.push({filePath: 'http://www.baidu.com', archiveName: '数据5', isMoveOver: false});
-    // $scope.model.searchResultList.push({filePath: 'http://www.youku.com', archiveName: '数据6', isMoveOver: false});
-    // $scope.model.searchResultList.push({filePath: 'http://www.baidu.com', archiveName: '数据7', isMoveOver: false});
-    // $scope.model.searchResultList.push({filePath: 'http://www.youku.com', archiveName: '数据8', isMoveOver: false});
-    // $scope.model.searchResultList.push({filePath: 'http://www.baidu.com', archiveName: '数据9', isMoveOver: false});
-    // $scope.model.searchResultList.push({filePath: 'http://www.youku.com', archiveName: '数据10', isMoveOver: false});
   };
 
   $scope.onMouseEnter = function(index){
@@ -154,6 +144,12 @@ app.controller('myCtrl', function ($scope, $http) {
 
   $scope.onContainer = function(){
     $scope.model.isShowSearchResult = false;
+  };
+
+  $scope.onExit = function(){
+    delCookie('cbssUser');
+    delCookie('cbssUserID');
+    location.href = '/';
   };
 
   $scope.initPage();

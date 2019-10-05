@@ -631,16 +631,6 @@ img {
   right: 20px;
 }
 
-
-/*l图片展示*/
-
-/*.EnvironmentalBg {*/
-  /*!*background: url(../images/home-bg-5.png) no-repeat top center;*!*/
-  /*background: url("../images/backimg.jpg") no-repeat;*/
-  /*background-size: 100% 100%;*/
-/*}*/
-
-
 /*main*/
 
 .imgContainer {
@@ -1011,9 +1001,18 @@ img {
 
 /*新闻详细*/
 
-.newshead {
-  background: url(../images/icons/news.jpg) no-repeat top center;
-  height: 216px;
+.news-head {
+  height: 66px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 10px;
+  color: #f2f2f2;
+
+  background: -webkit-linear-gradient(left, #c22ed0 , #5ffae0); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #c22ed0 , #5ffae0); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #c22ed0 , #5ffae0); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #005C97 , #363795,#4BC0C8); /* 标准的语法 */
 }
 
 .newstop {

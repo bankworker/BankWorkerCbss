@@ -1,27 +1,33 @@
 <link rel='stylesheet' href='/stylesheets/newsList.css' />
-<div class="newshead"></div>
-<div class="container" id="app" style="margin-top: 15px">
-  <div class="news-list">
-    <div class="media" v-for="news in newsArray" style="border-bottom: 1px solid #cccccc; padding-bottom: 10px;">
-      <div class="media-left">
-        <a :href="news.newsUrl" target="_blank">
-          <img class="media-object" :src="news.thumbnailUrl" style="width: 80px">
-        </a>
+<div ng-app="myApp" ng-controller="myCtrl">
+  <div class="news-head">
+    <span ng-bind="model.branchTitle"></span>
+  </div>
+  <div class="space-8"></div>
+  <div class="container">
+    <div class="news-list">
+      <div class="media" ng-repeat="news in model.branchNewsList" style="border-bottom: 1px solid #cccccc; padding-bottom: 10px;">
+        <div class="media-left">
+          <a ng-href="\{{news.newsLinkUrl}}" target="_blank">
+            <img class="media-object" ng-src="\{{news.newsImageUrl}}" style="width: 80px">
+          </a>
+        </div>
+        <div class="media-body">
+          <a ng-href="\{{news.newsLinkUrl}}" target="_blank">
+            <h3 class="media-heading news-title" style="padding-top: 10px" ng-bind="news.newsTitle"></h3>
+          </a>
+          <p class="news-time" ng-bind="news.newsDate">
+          </p>
+        </div>
       </div>
-      <div class="media-body">
-        <a :href="news.newsUrl" target="_blank">
-          <h3 class="media-heading news-title" style="padding-top: 10px">\{{news.newsTitle}}</h3>
-        </a>
-        <p class="news-time">
-          \{{news.newsDate}}
-        </p>
+    </div>
+    <div class="row text-center" style="margin-top: 15px" ng-if="model.isShowLoadMore">
+      <div>
+        <a href="javascript:;" class="load-more" ng-click="onLoadMore()">加载更多</a>
       </div>
     </div>
   </div>
-  <div class="row text-center" style="margin-top: 15px">
-    <div>
-      <a href="javascript:;" class="load-more" @click="onLoadMore()">加载更多</a>
-    </div>
-  </div>
+  <div class="space-10"></div>
 </div>
+
 <script src="javascripts/newsList.js"></script>

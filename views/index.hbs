@@ -10,8 +10,18 @@
   </div>
   <div class="col-md-9 right-content" ng-class="{'back-img': model.isUseDefaultBackImage == true}" ng-style="model.branchBackImageStyle">
     <div class="home-content">
+      <div class="space-8"></div>
       <div class="row content-header">
         <div class="col-md-6">
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span ng-bind="model.branchName"></span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#" ng-click="onExit()">退出</a></li>
+            </ul>
+          </div>
         </div>
         <div class="col-md-6">
           <div class="search-group">
@@ -62,7 +72,6 @@
           </a>
         </div>
       </div>
-
       <div class="row content-news-item">
         <ul>
           <li ng-repeat="news in model.branchNewsList">

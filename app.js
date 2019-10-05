@@ -25,6 +25,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//登录拦截器
+app.use(function (req, res, next) {
+  let url = req.originalUrl;
+  if (url !== '/' && url.indexOf('/login') < 0 && req.cookies['cbssUser'] === undefined) {
+    return res.redirect("/");
+  }
+  next();
+});
+
 app.use('/', loginRouter);
 app.use('/login', loginRouter);
 app.use('/index', indexRouter);

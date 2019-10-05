@@ -41,14 +41,21 @@ body{
 }
 
 .content-header{
-    margin-top: 25px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #00387a;
 }
 
 .content-header img{
     width: 100px;
 }
+.content-header .btn-group{
+    height: 38px;
+}
+.content-header .btn-primary{
+    background-color: #538fd6;
+    border-color: #538fd6;
+}
+
 .search-group{
     float: right;
     width: 320px;
