@@ -19,15 +19,6 @@ $(function(){
     $('.' + target).removeClass('hidden')
   });
 
-
-  /* 商品轮播图（带缩略图的轮播效果） */
-  // $(".banner").thumbnailImg({
-  //   large_elem: ".large_box_video",
-  //   small_elem: ".small_list_video",
-  //   left_btn: ".left_btn_video",
-  //   right_btn: ".right_btn_video"
-  // });
-
   $(".banner-video").thumbnailImg({
     large_elem: ".banner-video .large_box",
     small_elem: ".banner-video .small_list",

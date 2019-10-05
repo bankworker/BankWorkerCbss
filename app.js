@@ -9,7 +9,6 @@ let indexRouter = require('./routes');
 let listRouter = require('./routes/list');
 let detailRouter = require('./routes/detail');
 let detailOnlyFileRouter = require('./routes/detailOnlyFile');
-let common = require('./routes/common');
 let newsListRouter = require('./routes/newsList');
 let newsRouter = require('./routes/news');
 
@@ -40,7 +39,6 @@ app.use('/index', indexRouter);
 app.use('/list', listRouter);
 app.use('/detail', detailRouter);
 app.use('/detailOnlyFile', detailOnlyFileRouter);
-app.use('/common', common);
 app.use('/newsList', newsListRouter);
 app.use('/news', newsRouter);
 

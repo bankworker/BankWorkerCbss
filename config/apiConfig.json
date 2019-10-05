@@ -8,16 +8,8 @@
       "archiveList": "/api/bank/branch/archive/archiveList",
       "fuzzyArchiveList": "/api/bank/branch/archive/detail/fuzzy",
       "news": "/api/news",
-      "item": "/api/item",
-      "itemByID": "/api/item/current",
-      "detail": "/api/detail",
-      "detail4Item": "/api/detail/item",
-      "detail4File": "/api/detail/file",
-      "detail4ImageMemo": "/api/detail/imageMemo",
-      "user": "/api/user",
-      "sysName": "/api/systemName",
-      "logo": "/api/logo",
-      "logo4Branch": "/api/logo/branch"
+      "archiveListByParent": "/api/bank/branch/archive/archiveList",
+      "archiveDetail": "/api/bank/branch/archive/detail"
     }
   }
 }
