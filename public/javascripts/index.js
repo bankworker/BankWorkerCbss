@@ -1,27 +1,160 @@
-let app = new Vue({
-  el: '#app',
-  data: {
-    title: ''
-  },
-  methods: {
-    setSystemTitle: function () {
-      $.ajax({
-        url: '/sysName',
-        type: 'get',
-        success: function(res){
-          if(res.err){
-            layer.msg(res.msg);
-            return false;
-          }
-          app.$data.title = res.data.sysName;
-        },
-        error: function(XMLHttpRequest){
-          layer.msg('远程服务无响应，状态码：' + XMLHttpRequest.status);
+let app = angular.module('myApp', []);
+app.controller('myCtrl', function ($scope, $http) {
+  $scope.model = {
+    searchContent: '',
+    bankLogoUrl: '',
+    branchLogoUrl: '',
+    isUseDefaultBackImage: false,
+    branchBackImageStyle: {},
+    branchSystemTitle: '',
+    branchModuleList: [],
+    branchNewsList: [],
+    isShowSearchResult: false,
+    searchResultList: []
+  };
+
+  $scope.initPage = function () {
+    $scope.loadBranchSetting();
+    $scope.loadModuleList();
+    $scope.loadNewsList();
+  };
+
+  $scope.loadBranchSetting = function(){
+    $http.get('/login/backImageSetting').then(function successCallback (response) {
+      if(response.data.err){
+        $scope.model.isUseDefaultBackImage = true;
+        bootbox.alert(response.data.msg);
+        return false;
+      }
+      if(response.data.branchInfo === null){
+        $scope.model.isUseDefaultBackImage = true;
+        return false;
+      }
+      $scope.model.bankLogoUrl = response.data.branchInfo.bankLogo;
+      $scope.model.branchLogoUrl = response.data.branchInfo.branchLogo;
+      $scope.model.branchSystemTitle = response.data.branchInfo.branchName + '服务档案';
+      $scope.model.branchBackImageStyle = {
+        "background": "url(" + response.data.branchInfo.branchBackImage + ") repeat-y center center fixed",
+        "background-size": "100%"
+      };
+    }, function errorCallback(response) {
+      bootbox.alert('网络异常，请检查网络设置');
+    });
+  };
+
+  $scope.loadModuleList = function(){
+    $http.get('/index/moduleList').then(function successCallback (response) {
+      if(response.data.err){
+        if(response.data.expired){
+          location.href = '/login';
+        }else{
+          bootbox.alert(response.data.msg);
+          return false;
         }
+      }
+      if(response.data.dataList === null){
+        bootbox.alert('您尚未维护指标信息。');
+        return false;
+      }
+      angular.forEach(response.data.dataList, function (data) {
+        $scope.model.branchModuleList.push({
+          moduleLinkUrl: '/list?itemID=' + data.archiveID + '&itemName=' + data.archiveName,
+          moduleIconUrl: '/images/icons/' + data.archiveName + '.png'
+        });
       });
+
+    }, function errorCallback(response) {
+      bootbox.alert('网络异常，请检查网络设置');
+    });
+  };
+
+  $scope.loadNewsList = function(){
+    $http.get('/index/newsList').then(function successCallback (response) {
+      if(response.data.err){
+        if(response.data.expired){
+          location.href = '/login';
+        }else{
+          bootbox.alert(response.data.msg);
+          return false;
+        }
+      }
+      if(response.data.dataList === null){
+        return false;
+      }
+      angular.forEach(response.data.dataList, function (data) {
+        $scope.model.branchNewsList.push({
+          newsLinkUrl: '/news?newsID=' + data.newsID,
+          newsImageUrl: data.thumbnailUrl,
+          newsTitle: data.newsTitle,
+          newsDate: data.newsDate
+        });
+      });
+
+    }, function errorCallback(response) {
+      bootbox.alert('网络异常，请检查网络设置');
+    });
+  };
+
+  $scope.onSearchChange = function(){
+    $scope.model.searchResultList.splice(0, $scope.model.searchResultList.length);
+    if($scope.model.searchContent.length === 0){
+      $scope.model.isShowSearchResult = false;
+      return false;
     }
-  },
-  mounted: function () {
-    this.setSystemTitle();
-  }
+    $http.get('/index/fuzzyList?fuzzyContent='+$scope.model.searchContent).then(function successCallback (response) {
+      if(response.data.err){
+        if(response.data.expired){
+          location.href = '/login';
+        }else{
+          bootbox.alert(response.data.msg);
+          return false;
+        }
+      }
+      if(response.data.dataList === null){
+        $scope.model.isShowSearchResult = false;
+        return false;
+      }
+      angular.forEach(response.data.dataList, function (data) {
+        $scope.model.searchResultList.push({
+          filePath: data.archiveDetailContent,
+          archiveName: data.archiveDetailContent.substr(data.archiveDetailContent.lastIndexOf('/') + 1),
+          isMoveOver: false
+        });
+
+      });
+      $scope.model.isShowSearchResult = true;
+    }, function errorCallback(response) {
+      bootbox.alert('网络异常，请检查网络设置');
+    });
+
+    // $scope.model.isShowSearchResult = true;
+    // $scope.model.searchResultList.push({filePath: 'http://www.baidu.com', archiveName: '数据1', isMoveOver: false});
+    // $scope.model.searchResultList.push({filePath: 'http://www.youku.com', archiveName: '数据2', isMoveOver: false});
+    // $scope.model.searchResultList.push({filePath: 'http://www.baidu.com', archiveName: '数据3', isMoveOver: false});
+    // $scope.model.searchResultList.push({filePath: 'http://www.youku.com', archiveName: '数据4', isMoveOver: false});
+    // $scope.model.searchResultList.push({filePath: 'http://www.baidu.com', archiveName: '数据5', isMoveOver: false});
+    // $scope.model.searchResultList.push({filePath: 'http://www.youku.com', archiveName: '数据6', isMoveOver: false});
+    // $scope.model.searchResultList.push({filePath: 'http://www.baidu.com', archiveName: '数据7', isMoveOver: false});
+    // $scope.model.searchResultList.push({filePath: 'http://www.youku.com', archiveName: '数据8', isMoveOver: false});
+    // $scope.model.searchResultList.push({filePath: 'http://www.baidu.com', archiveName: '数据9', isMoveOver: false});
+    // $scope.model.searchResultList.push({filePath: 'http://www.youku.com', archiveName: '数据10', isMoveOver: false});
+  };
+
+  $scope.onMouseEnter = function(index){
+    $scope.model.searchResultList[index].isMoveOver = true;
+  };
+
+  $scope.onMouseLeave = function(index){
+    $scope.model.searchResultList[index].isMoveOver = false;
+  };
+
+  $scope.onSelectedSearchItem = function(filePath){
+    window.open(filePath);
+  };
+
+  $scope.onContainer = function(){
+    $scope.model.isShowSearchResult = false;
+  };
+
+  $scope.initPage();
 });

@@ -8,8 +8,8 @@ router.get('/', function(req, res, next) {
 
 router.get('/backImageSetting', function(req, res, next) {
   let service = new commonService.commonInvoke('branchInfo');
-  let bankCode = req.cookies.secmsBankCode;
-  let branchCode = req.cookies.secmsBranchCode;
+  let bankCode = req.cookies.cbssBankCode;
+  let branchCode = req.cookies.cbssBranchCode;
   if(bankCode === undefined || branchCode === undefined){
     res.json({
       err: false,
