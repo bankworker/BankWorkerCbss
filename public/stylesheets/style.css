@@ -107,7 +107,7 @@ img {
   top: 0;
   z-index: -1;
   width: 100%;
-  background: url("../images/backimg.jpeg") no-repeat;
+  background: url("../images/bg.jpeg") no-repeat;
 }
 
 .logo {
