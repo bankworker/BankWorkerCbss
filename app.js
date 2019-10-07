@@ -5,7 +5,7 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
 let loginRouter = require('./routes/login');
-let indexRouter = require('./routes');
+let indexRouter = require('./routes/index');
 let listRouter = require('./routes/list');
 let detailRouter = require('./routes/detail');
 let detailOnlyFileRouter = require('./routes/detailOnlyFile');

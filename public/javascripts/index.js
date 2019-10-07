@@ -122,7 +122,6 @@ app.controller('myCtrl', function ($scope, $http) {
           archiveName: data.archiveDetailContent.substr(data.archiveDetailContent.lastIndexOf('/') + 1),
           isMoveOver: false
         });
-
       });
       $scope.model.isShowSearchResult = true;
     }, function errorCallback(response) {
