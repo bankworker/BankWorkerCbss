@@ -37,7 +37,8 @@ app.controller('myCtrl', function ($scope, $http) {
   $scope.onLogin = function () {
     $http.post('/', {
       account: $scope.model.account,
-      password: $scope.model.password
+      password: $scope.model.password,
+      systemID: 1
     }).then(function successCallback(response) {
       if(response.data.err){
         bootbox.alert(response.data.msg);

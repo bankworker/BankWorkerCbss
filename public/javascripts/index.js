@@ -4,7 +4,7 @@ app.controller('myCtrl', function ($scope, $http) {
     searchContent: '',
     bankLogoUrl: '',
     branchLogoUrl: '',
-    isUseDefaultBackImage: false,
+    isUseDefaultBackImage: true,
     branchBackImageStyle: {},
     branchName: '',
     branchSystemTitle: '',
@@ -35,10 +35,14 @@ app.controller('myCtrl', function ($scope, $http) {
       $scope.model.branchLogoUrl = response.data.branchInfo.branchLogo;
       $scope.model.branchSystemTitle = response.data.branchInfo.branchName + '服务档案';
       $scope.model.branchName = response.data.branchInfo.branchName;
-      $scope.model.branchBackImageStyle = {
-        "background": "url(" + response.data.branchInfo.branchBackImage + ") repeat-y center center fixed",
-        "background-size": "100%"
-      };
+      if(response.data.branchInfo.branchBackImage !== ''){
+        $scope.model.isUseDefaultBackImage = false;
+        $scope.model.branchBackImageStyle = {
+          "background": "url(" + response.data.branchInfo.branchBackImage + ") repeat-y center center fixed",
+          "background-size": "100%"
+        };
+      }
+
     }, function errorCallback(response) {
       bootbox.alert('网络异常，请检查网络设置');
     });

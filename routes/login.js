@@ -38,7 +38,7 @@ router.get('/backImageSetting', function(req, res, next) {
 
 router.post('/', function (req, res, next) {
   let service = new commonService.commonInvoke('login');
-  let parameter = req.body.account + '/' + req.body.password + '/1';
+  let parameter = req.body.account + '/' + req.body.password + '/' + req.body.systemID;
 
   service.get(parameter, function (result) {
     if(result.err){
